@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>TechVolution Registration </h1>
+        <form action="success.html">
+            <h1>Personal Information</h1>
+            <div class="input-group">
+                <label><strong>First Name:</strong></label>
+                <input type="text" placeholder="Enter Your First Name" id="fname" onkeyup="validateFName()">
+                <span id="fname-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Last Name:</strong></label>
+                <input type="text" placeholder="Enter Your Last Name" id="lname" onkeyup="validateLName()">
+                <span id="lname-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Date of Birth:</strong></label>
+                <input type="date" id="dob" onchange="validateDOB()">
+                <span id="dob-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Email Id:</strong></label>
+                <input type="email" placeholder="Enter Your Email Id" id="email-id" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Mobile No.:</strong></label>
+                <input type="tel" placeholder="Enter your mobile number" id="phone-no" onkeyup="validatePhone()">
+                <span id="mobile-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Gender:</strong></label>
+                <input type="radio" style="flex-basis: 0%; margin: 0 10px;" name="gender" value="male" id="male" onkeyup="validateGender()">
+                <label for="male">Male</label>
+                <input type="radio" style="flex-basis: 0%; margin: 0 10px;" name="gender" value="female" id="female" onkeyup="validateGender()">
+                <label for="female">Female</label>
+                <span id="gender-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Country:</strong></label>
+                <select name="country" id="country-name" onclick="validateCountry()">
+                    <option value="" selected="selected">Select Country</option>
+                </select>
+                <span id="country-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>State:</strong></label>
+                <select name="state" id="state-name" onclick="validateState()">
+                    <option value="" selected="selected">Please select country first</option>
+                </select>
+                <span id="state-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Address:</strong></label>
+                <input type="text" placeholder="Enter Your Address" id="address" onkeyup="validateAddress()">
+                <span id="address-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Pin Code:</strong></label>
+                <input type="text" placeholder="Enter Your Pin Code" id="pincode" onkeyup="validatePinCode()">
+                <span id="pin-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>City:</strong></label>
+                <input type="text" placeholder="Enter Your City" id="city" onkeyup="validateCity()">
+                <span id="city-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>District:</strong></label>
+                <select name="district" id="district-name" onclick="validateDistrict()">
+                    <option value="" selected="selected">Please select state first</option>
+                </select>
+                <span id="district-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Event Preferences:</strong></label>
+                <select name="eventpreferencess" id="event-preferences" onclick="validateEventpreferences()">
+                    <option value="0"> </option>
+                    <option value="1">Valorant Gaming</option>
+                    <option value="2">Tech Tinder</option>
+                    <option value="3">Code Relay</option>
+                    <option value="4">Picture Probe</option>
+                    <option value="5">UI/Ux designing</option>
+                    <option value="6">Deploy IT</option>
+                    <option value="7">Hack My PC</option>
+                    <option value="8">Meme Splash</option>
+                </select>
+                <span id="eventpreferences-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>T-Shirt size:</strong> </label>
+                <select name="tshirtsize" id="t-shirt" onclick="validateTshirt()">
+                    <option value="0"> </option>
+                    <option value="1">S</option>
+                    <option value="2">M</option>
+                    <option value="3">L</option>
+                </select>
+                <span id="tshirt-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label><strong>Dietary restrictions:</strong></label>
+                <textarea rows="5" placeholder="Enter Your Dietary Restrictions" id="dietaryrestrictions" onkeyup="validatedietaryrestrictions()"></textarea>
+                <span id="dietaryrestrictions-error"></span>
+            </div>
+
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submit-error"></span>
+
+        </form>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
